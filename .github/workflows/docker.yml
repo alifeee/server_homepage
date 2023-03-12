@@ -33,5 +33,6 @@ jobs:
         script: |
           docker stop server_homepage
           docker rm server_homepage
+          docker pull alifeee/server_homepage
           docker run -d -p 80:80 --name server_homepage alifeee/server_homepage
           docker ps -a
