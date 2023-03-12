@@ -1,16 +1,7 @@
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #000000;
-}
-
 body {
   background-color: #000000;
   height: 100%;
   color: green;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
   line-height: 1.42857143;
   margin: 0;
   padding: 0;
@@ -21,6 +12,13 @@ main {
   max-width: 960px;
   padding: 0 15px;
   font-family: monospace;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 
 .console {
