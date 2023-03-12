@@ -1,0 +1,49 @@
+body {
+  background-color: #000000;
+  color: green;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  margin: 0;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 15px;
+  font-family: monospace;
+}
+
+.console {
+  display: flex;
+  flex-direction: column;
+}
+
+.command::before {
+  color: #00ff00;
+  content: "alifeee> ";
+}
+
+.result {
+  margin-left: 2rem;
+}
+
+table.result {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.input {
+  font-weight: bold;
+  color: #00ff00;
+}
+
+.input:focus {
+  outline: none;
+}
+
+a {
+  color: green;
+}
