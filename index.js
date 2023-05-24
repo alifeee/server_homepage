@@ -47,7 +47,7 @@ function parseCommand(text) {
         <td>☑</td>
         <td>80</td>
         <td>
-          <a href='https://github.com/alifeee/server_homepage'>https://github.com/alifeee/server_homepage</a>
+          <a target="_blank" href='https://github.com/alifeee/server_homepage'>https://github.com/alifeee/server_homepage</a>
         </td>
       </tr>
       <tr>
@@ -55,7 +55,7 @@ function parseCommand(text) {
         <td>☑</td>
         <td>5000</td>
         <td>
-          <a href='https://github.com/alifeee/steam_collage_api'>https://github.com/alifeee/steam_collage_api</a>
+          <a target="_blank" href='https://github.com/alifeee/steam_collage_api'>https://github.com/alifeee/steam_collage_api</a>
         </td>
       </tr>
     </table>`;
