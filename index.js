@@ -58,6 +58,14 @@ function parseCommand(text) {
           <a target="_blank" href='https://github.com/alifeee/steam_collage_api'>https://github.com/alifeee/steam_collage_api</a>
         </td>
       </tr>
+      <tr>
+        <td>Daily budgeter Telegram bot</td>
+        <td>☐</td>
+        <td>-</td>
+        <td>
+          <a target="_blank" href='https://github.com/alifeee/telegram-budgeter'>https://github.com/alifeee/telegram-budgeter</a>
+        </td>
+      </tr>
     </table>`;
   } else if (text.startsWith("cd")) {
     return `
