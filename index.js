@@ -74,6 +74,14 @@ function parseCommand(text) {
           <a target="_blank" href='https://github.com/alifeee/pollen_bot'>https://github.com/alifeee/pollen_bot</a>
         </td>
       </tr>
+      <tr>
+        <td>Bus bot</td>
+        <td>☐</td>
+        <td>-</td>
+        <td>
+          <a target="_blank" href='https://github.com/alifeee/bus_bot'>https://github.com/alifeee/bus_bot</a>
+        </td>
+      </tr>
     </table>`;
   } else if (text.startsWith("cd")) {
     return `
