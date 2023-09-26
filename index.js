@@ -43,7 +43,7 @@ function parseCommand(text) {
         <td>---</td><td>---</td><td>---</td><td>---</td>
       </tr>
       <tr>
-        <td>Homepage</td>
+        <td>(Nginx) Homepage</td>
         <td>☑</td>
         <td>80</td>
         <td>
@@ -51,7 +51,7 @@ function parseCommand(text) {
         </td>
       </tr>
       <tr>
-        <td>Steam collage API</td>
+        <td>(Python API) Steam collage API</td>
         <td>☑</td>
         <td>5000</td>
         <td>
@@ -59,7 +59,7 @@ function parseCommand(text) {
         </td>
       </tr>
       <tr>
-        <td>Daily budgeter Telegram bot</td>
+        <td>(Telegram bot) Daily budgeter bot</td>
         <td>☐</td>
         <td>-</td>
         <td>
@@ -67,7 +67,7 @@ function parseCommand(text) {
         </td>
       </tr>
       <tr>
-        <td>Pollen bot</td>
+        <td>(Telegram bot) Pollen bot</td>
         <td>☐</td>
         <td>-</td>
         <td>
@@ -75,7 +75,7 @@ function parseCommand(text) {
         </td>
       </tr>
       <tr>
-        <td>Bus bot</td>
+        <td>(Telegram bot) Bus bot</td>
         <td>☐</td>
         <td>-</td>
         <td>
