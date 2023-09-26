@@ -82,6 +82,14 @@ function parseCommand(text) {
           <a target="_blank" href='https://github.com/alifeee/bus_bot'>https://github.com/alifeee/bus_bot</a>
         </td>
       </tr>
+      <tr>
+        <td>(Mumble Server) Murmur</td>
+        <td>☐</td>
+        <td>64738</td>
+        <td>
+          <a target="_blank" href='https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4'>https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4</a>
+        </td>
+      </tr>
     </table>`;
   } else if (text.startsWith("cd")) {
     return `
