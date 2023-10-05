@@ -90,6 +90,14 @@ function parseCommand(text) {
           <a target="_blank" href='https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4'>https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4</a>
         </td>
       </tr>
+      <tr>
+        <td>(Tool) Website Differ</td>
+        <td>☐</td>
+        <td>5616</td>
+        <td>
+          <a target="_blank" href='https://github.com/alifeee/website-differ'>https://github.com/alifeee/website-differ</a>
+        </td>
+      </tr>
     </table>`;
   } else if (text.startsWith("cd")) {
     return `
