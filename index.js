@@ -8,19 +8,20 @@ document.addEventListener("keydown", function (e) {
   if (e.keyCode === 13) {
     bottomSpan = document.querySelector("#bottom");
     text = document.querySelector(".input").innerText;
-    bottomSpan.insertAdjacentHTML(
-      "beforebegin",
-      `<span class="command">${text}</span>`
-    );
-    result = parseCommand(text);
-    if (result) {
-      bottomSpan.insertAdjacentHTML("beforebegin", result);
-    }
-    document.querySelector(".input").innerHTML = "";
+    result = parseCommand(text).then((result) => {
+      bottomSpan.insertAdjacentHTML(
+        "beforebegin",
+        `<span class="command">${text}</span>`
+      );
+      if (result) {
+        bottomSpan.insertAdjacentHTML("beforebegin", result);
+      }
+      document.querySelector(".input").innerHTML = "";
+    });
   }
 });
 
-function parseCommand(text) {
+async function parseCommand(text) {
   if (text.includes("help")) {
     return `
     <span class='result'>
@@ -31,74 +32,17 @@ function parseCommand(text) {
     text.startsWith("dir") ||
     text.startsWith("list-projects")
   ) {
+    // get projects with fetch() to projects.html
+    response = await fetch("projects.html")
+      .then((response) => response.text())
+      .then((text) => {
+        return text;
+      });
     return `
-    <table class='result'>
-      <tr>
-        <th>Name</th>
-        <th>Docker image</th>
-        <th>Port</th>
-        <th>GitHub</th>
-      </tr>
-      <tr>
-        <td>---</td><td>---</td><td>---</td><td>---</td>
-      </tr>
-      <tr>
-        <td>(Nginx) Homepage</td>
-        <td>☑</td>
-        <td>80</td>
-        <td>
-          <a target="_blank" href='https://github.com/alifeee/server_homepage'>https://github.com/alifeee/server_homepage</a>
-        </td>
-      </tr>
-      <tr>
-        <td>(Python API) Steam collage API</td>
-        <td>☑</td>
-        <td>5000</td>
-        <td>
-          <a target="_blank" href='https://github.com/alifeee/steam_collage_api'>https://github.com/alifeee/steam_collage_api</a>
-        </td>
-      </tr>
-      <tr>
-        <td>(Telegram bot) Daily budgeter bot</td>
-        <td>☐</td>
-        <td>-</td>
-        <td>
-          <a target="_blank" href='https://github.com/alifeee/telegram-budgeter'>https://github.com/alifeee/telegram-budgeter</a>
-        </td>
-      </tr>
-      <tr>
-        <td>(Telegram bot) Pollen bot</td>
-        <td>☐</td>
-        <td>-</td>
-        <td>
-          <a target="_blank" href='https://github.com/alifeee/pollen_bot'>https://github.com/alifeee/pollen_bot</a>
-        </td>
-      </tr>
-      <tr>
-        <td>(Telegram bot) Bus bot</td>
-        <td>☐</td>
-        <td>-</td>
-        <td>
-          <a target="_blank" href='https://github.com/alifeee/bus_bot'>https://github.com/alifeee/bus_bot</a>
-        </td>
-      </tr>
-      <tr>
-        <td>(Mumble Server) Murmur</td>
-        <td>☐</td>
-        <td>64738</td>
-        <td>
-          <a target="_blank" href='https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4'>https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4</a>
-        </td>
-      </tr>
-      <tr>
-        <td>(Tool) Website Differ</td>
-        <td>☐</td>
-        <td>5616</td>
-        <td>
-          <a target="_blank" href='https://github.com/alifeee/website-differ'>https://github.com/alifeee/website-differ</a>
-        </td>
-      </tr>
-    </table>`;
+    <span class='result'>
+      ${response}
+    </span>
+    `;
   } else if (text.startsWith("cd")) {
     return `
     <span class='result'>
@@ -114,13 +58,15 @@ function parseCommand(text) {
   }
 }
 
-document.querySelector("#bottom").insertAdjacentHTML(
-  "beforebegin",
-  `
+parseCommand("ls").then((result) => {
+  document.querySelector("#bottom").insertAdjacentHTML(
+    "beforebegin",
+    `
     <span class=command>
       list-projects
     </span>
     <br/>
-    ${parseCommand("ls")}
+    ${result}
     `
-);
+  );
+});
