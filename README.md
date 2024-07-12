@@ -12,5 +12,5 @@ Add projects to `projects.yaml`, and then use `mustache` to generate `projects.h
 
 ```bash
 # sudo apt-get install ruby-mustache
-mustache projects.yaml projects.mo
+./build.sh
 ```

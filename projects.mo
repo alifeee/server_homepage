@@ -1,9 +1,9 @@
 <table class="result">
   <tr>
     <th>Name</th>
-    <th>Port</th>
-    <th>Subdomain</th>
-    <th>GitHub</th>
+    <th>port / subdomain</th>
+    <th>URL</th>
+    <th>source</th>
   </tr>
   <tr>
     <td>---</td>
@@ -14,18 +14,13 @@
   {{#projects}}
   <tr>
     <td>{{name}}</td>
-    <td>{{port}}</td>
-    <td>{{subdomain}}</td>
     <td>
-      {{#url}}
-        <a href="{{url}}">
-          {{url}}
-        </a>
-      {{/url}}
-      {{^url}}
-        -
-      {{/url}}
+       {{port}}
+       {{#subdomain}} / {{subdomain}}{{/subdomain}}
+       {{^subdomain}}{{^port}}-{{/port}}{{/subdomain}}
     </td>
+    <td>{{#url}}<a href="{{url}}">{{url}}</a>{{/url}}{{^url}}-{{/url}}</td>
+    <td>{{#source}}<a href="{{source}}">{{source}}</a>{{/source}}{{^source}}-{{/source}}</td>
   </tr>
   {{/projects}}
 </table>
