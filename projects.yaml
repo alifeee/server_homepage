@@ -18,11 +18,6 @@ projects:
   - name: "(Mumble Server) Murmur"
     port: 64738
     source: "https://gist.github.com/alifeee/2b8831d503438ff147fb8df6c01858c4"
-  - name: "(Python tool) Website Differ"
-    port: "443"
-    subdomain: "webdiffer"
-    url: "http://webdiffer.alifeee.co.uk"
-    source: "https://github.com/alifeee/website-differ"
   - name: "(Go tool) Webring"
     port: "443"
     subdomain: "webring"
@@ -64,3 +59,6 @@ projects:
   - name: "(website) Occupation data"
     url: "http://server.alifeee.co.uk/occupation-data/"
     source: "https://github.com/alifeee/occupation-data"
+  - name: "(image) Sheffield weather visualisation"
+    url: "https://server.alifeee.co.uk/static/weather/sheffield.bmp"
+    source: "https://github.com/alifeee/weather_landscape/"
