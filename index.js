@@ -7,7 +7,7 @@ document.addEventListener("click", function () {
 document.addEventListener("keydown", function (e) {
   if (e.keyCode === 13) {
     bottomSpan = document.querySelector("#bottom");
-    text = document.querySelector(".input").innerText;
+    text = document.querySelector(".input").innerText.trim();
     result = parseCommand(text).then((result) => {
       bottomSpan.insertAdjacentHTML(
         "beforebegin",
