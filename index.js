@@ -57,16 +57,3 @@ async function parseCommand(text) {
     });
   }
 }
-
-parseCommand("ls").then((result) => {
-  document.querySelector("#bottom").insertAdjacentHTML(
-    "beforebegin",
-    `
-    <span class=command>
-      list-projects
-    </span>
-    <br/>
-    ${result}
-    `
-  );
-});
