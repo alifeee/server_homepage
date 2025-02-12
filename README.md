@@ -2,7 +2,7 @@
 
 This is the homepage for my server, hosted with [Kamatera](https://www.kamatera.com/).
 
-Visit the live page at <http://server.alifeee.co.uk>.
+Visit the live page at <http://server.alifeee.net>.
 
 ![Screenshot of homepage, showing green terminal and list of projects.](images/homepage.png)
 
