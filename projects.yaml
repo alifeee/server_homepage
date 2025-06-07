@@ -74,3 +74,8 @@ projects:
   - name: "(service) ladder HTTP Web Proxy"
     url: "https://ladder.alifeee.net/"
     source: "https://github.com/everywall/ladder"
+  - name: "(wiki) BookStack"
+    source: "https://www.bookstackapp.com/"
+  - name: "(guestbooks) Guestbooks"
+    url: "https://guestbook.alifeee.net/"
+    source: "https://baccyflap.com/res/gbdl/"
