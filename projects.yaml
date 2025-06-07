@@ -71,3 +71,6 @@ projects:
   - name: "(CGI script) random RSS picker"
     url: "https://server.alifeee.net/do/randomrss.cgi"
     source: "https://gist.github.com/alifeee/da157fcb92605d4fcdf3932aabcf56fe"
+  - name: "(service) ladder HTTP Web Proxy"
+    url: "https://ladder.alifeee.net/"
+    source: "https://github.com/everywall/ladder"
