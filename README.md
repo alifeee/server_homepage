@@ -1,3 +1,5 @@
+> [!CAUTION]
+> MOVED! see <https://git.alifeee.net/server_homepage/about/>
 # Server homepage
 
 This is the homepage for my server, hosted with [Kamatera](https://www.kamatera.com/).
